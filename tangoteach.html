@@ -328,6 +328,13 @@
       .values-section,.contact-section{padding:72px 0}
       .hero{padding:100px 0 60px}
       .sh{margin-bottom:40px}
+      .hero-cards{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:24px}
+      .hero-cards .fbadge{grid-column:1 / -1;order:3}
+      .hero-cards .stat-c{order:1}
+      .stat-c{padding:18px}
+      .stat-num{font-size:2rem}
+      .stat-lbl{font-size:.7rem}
+      .fbadge{padding:14px 16px}
     }
 
     /* FLOATING CTAs */
@@ -733,9 +740,10 @@ document.querySelectorAll('.sc').forEach(card=>{
   });
 });
 
-/* SCROLL REVEAL */
-const obs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('vis');obs.unobserve(e.target)}})},{threshold:.1,rootMargin:'0px 0px -40px 0px'});
+/* SCROLL REVEAL — con seguro: si por scroll rápido (típico en iOS) el observer no llega a disparar, el contenido se muestra solo igual */
+const obs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('vis');obs.unobserve(e.target)}})},{threshold:0,rootMargin:'0px 0px 0px 0px'});
 document.querySelectorAll('.rv').forEach(el=>obs.observe(el));
+setTimeout(()=>document.querySelectorAll('.rv:not(.vis)').forEach(el=>el.classList.add('vis')),2000);
 
 /* FAQ */
 function faqToggle(el){
