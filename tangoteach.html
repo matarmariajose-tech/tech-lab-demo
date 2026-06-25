@@ -38,7 +38,6 @@
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet"/>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
 
   <!-- META PIXEL — reemplazá YOUR_META_PIXEL_ID y descomentá para activar -->
   <!--
@@ -302,7 +301,9 @@
     .fg input:focus~.fline,.fg textarea:focus~.fline{width:100%}
     .fnote{font-size:.72rem;color:rgba(26,26,46,.26);text-align:center;margin-top:12px}
     .fmsg{margin-top:12px;padding:12px 16px;border-radius:12px;font-size:.82rem;text-align:center;display:none}
-    .fmsg.ok{background:#e8f5e9;color:#2e7d32;display:block}
+    .fmsg.ok{background:rgba(67,24,255,.08);color:var(--indigo);display:block}
+    .spin-ico{animation:spinico .8s linear infinite}
+    @keyframes spinico{to{transform:rotate(360deg)}}
     .fmsg.err{background:#fef2f2;color:#b91c1c;display:block}
 
     /* FOOTER */
@@ -342,8 +343,7 @@
     .fab{height:46px;padding:0 18px;border-radius:10px;display:flex;align-items:center;gap:9px;font-size:.82rem;font-weight:600;font-family:var(--font);text-transform:none;font-variant:normal;color:#fff;cursor:pointer;border:1px solid var(--bd);background:var(--dmid);box-shadow:0 10px 24px -10px rgba(0,0,0,.5);transition:border-color .25s,transform .25s var(--e1),background .25s}
     .fab:hover{transform:translateY(-2px);border-color:rgba(255,255,255,.22)}
     .fab i{font-size:.95rem}
-    .fab-wa i{color:#25D366}
-    .fab-bot i{color:var(--coral)}
+    .fab-bot svg{color:var(--coral)}
     @media(max-width:640px){.float-stack{right:16px;bottom:16px}.fab{height:42px;padding:0 14px;font-size:.78rem}}
 
     /* CHAT WIDGET */
@@ -414,16 +414,16 @@
           <span data-i18n="h1">Build</span><span class="ac"> real.</span><br/>
           <span data-i18n="h2">Launch</span><span class="ai"> fast.</span>
         </h1>
-        <p class="hero-tag">tu idea → design → dev → <span class="ac">product.</span></p>
-        <p class="hero-desc" data-i18n="hero_desc">Sin inversores. Sin capital propio. Tangotech convierte tu idea en un producto real.</p>
+        <p class="hero-tag">Idea → diseño → desarrollo → <span class="ac">producto real.</span></p>
+        <p class="hero-desc" data-i18n="hero_desc">Diseño, desarrollo y lanzamiento — todo con un equipo senior, sin que necesites inversores ni armar una empresa.</p>
         <div class="hero-btns">
-          <button class="btn-coral" id="toForm"><span data-i18n="hero_cta">Quiero construir esto</span><i class="fas fa-arrow-right"></i></button>
+          <button class="btn-coral" id="toForm"><span data-i18n="hero_cta">Quiero construir esto</span><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
           <button class="btn-ghost" id="toSv"><span data-i18n="hero_disc">Descubrir más</span></button>
         </div>
       </div>
       <div class="hero-cards">
         <div class="stat-c"><div class="stat-num"><span>+40</span></div><div class="stat-lbl" data-i18n="s1">proyectos lanzados</div></div>
-        <div class="fbadge"><div class="fbi"><i class="fas fa-rocket"></i></div><div><div class="fbt" data-i18n="fb1">Equipo completo desde día 1</div><div class="fbs" data-i18n="fb2">Dev + Diseño + Organización</div></div></div>
+        <div class="fbadge"><div class="fbi"><svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 3 14h7l-1 8 11-12h-7l1-8z"/></svg></div><div><div class="fbt" data-i18n="fb1">Un solo equipo, todo el proceso</div><div class="fbs" data-i18n="fb2">Diseño, desarrollo y lanzamiento</div></div></div>
         <div class="stat-c"><div class="stat-num"><span class="ac">&lt;6</span> sem</div><div class="stat-lbl" data-i18n="s2">Tiempo promedio al mercado</div></div>
       </div>
     </div>
@@ -482,12 +482,12 @@
     <div class="sh rv">
       <div class="stag" data-i18n="sv_tag">// QUÉ HACEMOS</div>
       <h2 class="stit" data-i18n="sv_tit">De la idea al producto<br/>en tiempo récord.</h2>
-      <p class="ssub" data-i18n="sv_sub">Un equipo completo. Sin que tengas que armar una empresa para lograrlo.</p>
+      <p class="ssub" data-i18n="sv_sub">Diseño, desarrollo, producto y pagos. Todo bajo un mismo techo senior, sin tercerizar nada.</p>
     </div>
     <div class="sg">
-      <div class="sc rv d1"><div class="sc-glow"></div><div class="sc-num">01</div><div class="sc-ico"><i class="fas fa-code"></i></div><h3 data-i18n="s1t">Construcción del producto</h3><p data-i18n="s1d">Armamos la web o la app que tu idea necesita, lista para que la gente la use de verdad — no una maqueta.</p><div class="sc-tags"><span class="sc-tag">Web</span><span class="sc-tag">App móvil</span><span class="sc-tag">Sólido</span><span class="sc-tag">Rápido</span></div></div>
-      <div class="sc rv d2"><div class="sc-glow"></div><div class="sc-num">02</div><div class="sc-ico"><i class="fas fa-palette"></i></div><h3 data-i18n="s2t">Diseño que se entiende</h3><p data-i18n="s2d">Una pantalla simple, donde cualquiera sabe qué hacer sin instrucciones. La probamos con personas reales antes de construir.</p><div class="sc-tags"><span class="sc-tag">Simple</span><span class="sc-tag">Probado con gente real</span><span class="sc-tag">Prolijo</span></div></div>
-      <div class="sc rv d3"><div class="sc-glow"></div><div class="sc-num">03</div><div class="sc-ico"><i class="fas fa-chart-line"></i></div><h3 data-i18n="s3t">Organización y avance</h3><p data-i18n="s3d">Orden, seguimiento claro y cero tiempo perdido.</p><div class="sc-tags"><span class="sc-tag">Plan claro</span><span class="sc-tag">Avance visible</span><span class="sc-tag">Sin sorpresas</span></div></div>
+      <div class="sc rv d1"><div class="sc-glow"></div><div class="sc-num">01</div><div class="sc-ico"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8 4 2 12l6 8M16 4l6 8-6 8"/></svg></div><h3 data-i18n="s1t">Construcción del producto</h3><p data-i18n="s1d">Armamos la web o la app que tu idea necesita, lista para que la gente la use de verdad — no una maqueta.</p><div class="sc-tags"><span class="sc-tag">Web</span><span class="sc-tag">App móvil</span><span class="sc-tag">Sólido</span><span class="sc-tag">Rápido</span></div></div>
+      <div class="sc rv d2"><div class="sc-glow"></div><div class="sc-num">02</div><div class="sc-ico"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="4"/><path d="M3 9h18M9 21V9"/></svg></div><h3 data-i18n="s2t">Diseño que se entiende</h3><p data-i18n="s2d">Una pantalla simple, donde cualquiera sabe qué hacer sin instrucciones. La probamos con personas reales antes de construir.</p><div class="sc-tags"><span class="sc-tag">Simple</span><span class="sc-tag">Probado con gente real</span><span class="sc-tag">Prolijo</span></div></div>
+      <div class="sc rv d3"><div class="sc-glow"></div><div class="sc-num">03</div><div class="sc-ico"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17V9M9 17V5M15 17v-7M21 17V11"/></svg></div><h3 data-i18n="s3t">Organización y avance</h3><p data-i18n="s3d">Orden, seguimiento claro y cero tiempo perdido.</p><div class="sc-tags"><span class="sc-tag">Plan claro</span><span class="sc-tag">Avance visible</span><span class="sc-tag">Sin sorpresas</span></div></div>
     </div>
   </div>
 </section>
@@ -512,9 +512,9 @@
   <div class="w">
     <div class="sh c rv"><div class="stag" data-i18n="v_tag">// VALORES</div><h2 class="stit" data-i18n="v_tit">Lo que nos mueve.</h2><p class="ssub" data-i18n="v_sub">Tres principios no negociables que definen cada proyecto.</p></div>
     <div class="vg">
-      <div class="vc rv d1"><div class="v-ico"><i class="fas fa-eye"></i></div><div class="vnum">01 //</div><h3 data-i18n="v1t">Transparencia</h3><p data-i18n="v1d">Sin costos ocultos, sin sorpresas. Tenés acceso al tablero del proyecto en tiempo real.</p></div>
-      <div class="vc rv d2"><div class="v-ico"><i class="fas fa-gem"></i></div><div class="vnum">02 //</div><h3 data-i18n="v2t">Craft</h3><p data-i18n="v2d">Cada proyecto lo tratamos como si fuera nuestro propio producto. Talento senior, sin excepciones.</p></div>
-      <div class="vc rv d3"><div class="v-ico"><i class="fas fa-handshake"></i></div><div class="vnum">03 //</div><h3 data-i18n="v3t">Ownership</h3><p data-i18n="v3d">El código es tuyo, el repo es tuyo. El resultado nos importa, no solo los entregables.</p></div>
+      <div class="vc rv d1"><div class="v-ico"><svg viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/></svg></div><div class="vnum">01 //</div><h3 data-i18n="v1t">Transparencia</h3><p data-i18n="v1d">Sin costos ocultos, sin sorpresas. Tenés acceso al tablero del proyecto en tiempo real.</p></div>
+      <div class="vc rv d2"><div class="v-ico"><svg viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 3 8l9 5 9-5-9-5z"/><path d="M3 13l9 5 9-5M3 17.5l9 5 9-5"/></svg></div><div class="vnum">02 //</div><h3 data-i18n="v2t">Craft</h3><p data-i18n="v2d">Cada proyecto lo tratamos como si fuera nuestro propio producto. Talento senior, sin excepciones.</p></div>
+      <div class="vc rv d3"><div class="v-ico"><svg viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8 12l3 3 6-6"/><circle cx="12" cy="12" r="9"/></svg></div><div class="vnum">03 //</div><h3 data-i18n="v3t">Ownership</h3><p data-i18n="v3d">El código es tuyo, el repo es tuyo. El resultado nos importa, no solo los entregables.</p></div>
     </div>
   </div>
 </section>
@@ -524,9 +524,9 @@
   <div class="w">
     <div class="sh c rv"><div class="stag" data-i18n="t_tag">// EL EQUIPO</div><h2 class="stit" data-i18n="t_tit">Arquitectos de producto.</h2><p class="ssub" data-i18n="t_sub">Solo seniors. Sin promesas vacías.</p></div>
     <div class="tg">
-      <div class="tc rv d1"><div class="tav" style="background:rgba(67,24,255,.13);color:#4318FF"><i class="fas fa-code"></i></div><div class="t-role" style="color:#4318FF">Construye la base técnica</div><h4>Programación</h4><p>8 años construyendo productos en startups que crecieron rápido. Se asegura de que lo que armamos hoy no se caiga cuando lleguen más usuarios.</p></div>
-      <div class="tc rv d2"><div class="tav" style="background:rgba(255,107,74,.13);color:#FF6B4A"><i class="fas fa-pen-ruler"></i></div><div class="t-role" style="color:#FF6B4A">Piensa cómo se usa</div><h4>Diseño</h4><p>6 años diseñando productos en agencias y startups. Se enfoca en que la gente entienda qué hacer apenas abre la app.</p></div>
-      <div class="tc rv d3"><div class="tav" style="background:rgba(6,214,160,.12);color:#06D6A0"><i class="fas fa-diagram-project"></i></div><div class="t-role" style="color:#06D6A0">Organiza el avance</div><h4>Plan y entregas</h4><p>Coordinó más de 20 proyectos. Traduce entre lo que quiere el founder y lo que necesita el equipo técnico.</p></div>
+      <div class="tc rv d1"><div class="tav" style="background:rgba(67,24,255,.13);color:#4318FF"><svg viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8 4 2 12l6 8M16 4l6 8-6 8"/></svg></div><div class="t-role" style="color:#4318FF">Construye la base técnica</div><h4>Programación</h4><p>8 años construyendo productos en startups que crecieron rápido. Se asegura de que lo que armamos hoy no se caiga cuando lleguen más usuarios.</p></div>
+      <div class="tc rv d2"><div class="tav" style="background:rgba(255,107,74,.13);color:#FF6B4A"><svg viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="4"/><path d="M3 9h18M9 21V9"/></svg></div><div class="t-role" style="color:#FF6B4A">Piensa cómo se usa</div><h4>Diseño</h4><p>6 años diseñando productos en agencias y startups. Se enfoca en que la gente entienda qué hacer apenas abre la app.</p></div>
+      <div class="tc rv d3"><div class="tav" style="background:rgba(6,214,160,.12);color:#06D6A0"><svg viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="6" r="2.5"/><circle cx="18" cy="6" r="2.5"/><circle cx="12" cy="18" r="2.5"/><path d="M8 7.5l3 8.5M16 7.5l-3 8.5"/></svg></div><div class="t-role" style="color:#06D6A0">Organiza el avance</div><h4>Plan y entregas</h4><p>Coordinó más de 20 proyectos. Traduce entre lo que quiere el founder y lo que necesita el equipo técnico.</p></div>
     </div>
   </div>
 </section>
@@ -554,9 +554,9 @@
         <div class="stag" data-i18n="c_tag">// EMPEZÁ HOY</div>
         <h2 class="stit" style="color:var(--text)" data-i18n="c_tit">Contanos<br/>tu idea.</h2>
         <p class="fi-desc" data-i18n="c_sub">Sin compromiso. Te ayudamos a encontrar el mejor camino para tu proyecto.</p>
-        <div class="perk"><div class="p-ico"><i class="fas fa-bolt"></i></div><div class="p-txt"><strong data-i18n="p1t">Asesoría gratuita</strong><span data-i18n="p1d">30 min con un experto en producto</span></div></div>
-        <div class="perk"><div class="p-ico"><i class="fas fa-clock"></i></div><div class="p-txt"><strong data-i18n="p2t">Respuesta en 24h</strong><span data-i18n="p2d">Compromiso de velocidad real</span></div></div>
-        <div class="perk"><div class="p-ico"><i class="fas fa-lock"></i></div><div class="p-txt"><strong data-i18n="p3t">Código es tuyo</strong><span data-i18n="p3d">Repo, dominio e infra en tu cuenta</span></div></div>
+        <div class="perk"><div class="p-ico"><svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 3 14h7l-1 8 11-12h-7l1-8z"/></svg></div><div class="p-txt"><strong data-i18n="p1t">Asesoría gratuita</strong><span data-i18n="p1d">30 min con un experto en producto</span></div></div>
+        <div class="perk"><div class="p-ico"><svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg></div><div class="p-txt"><strong data-i18n="p2t">Respuesta en 24h</strong><span data-i18n="p2d">Compromiso de velocidad real</span></div></div>
+        <div class="perk"><div class="p-ico"><svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="11" width="16" height="9" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg></div><div class="p-txt"><strong data-i18n="p3t">Código es tuyo</strong><span data-i18n="p3d">Repo, dominio e infra en tu cuenta</span></div></div>
       </div>
       <div class="rv d2">
         <form id="lf" novalidate>
@@ -565,9 +565,9 @@
           <div class="fg"><textarea id="fi" placeholder=" " required rows="3"></textarea><label for="fi" data-i18n="fi_l">¿Cuál es tu idea?</label><div class="fline"></div></div>
           <button type="submit" class="btn-indigo" id="sbtn">
             <span class="bl" data-i18n="f_sub">Enviar propuesta →</span>
-            <span class="li"><i class="fas fa-spinner fa-spin"></i>&nbsp;<span data-i18n="f_snd">Enviando…</span></span>
+            <span class="li"><svg class="spin-ico" viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M12 3a9 9 0 1 0 9 9"/></svg>&nbsp;<span data-i18n="f_snd">Enviando…</span></span>
           </button>
-          <p class="fnote" data-i18n="f_note">✅ Sin spam. Respondemos en menos de 24 horas hábiles.</p>
+          <p class="fnote" data-i18n="f_note">Sin spam. Respondemos en menos de 24 horas hábiles.</p>
         </form>
         <div class="fmsg" id="fmsg"></div>
       </div>
@@ -615,21 +615,21 @@
   <div class="chat-win" id="chatWin">
     <div class="chat-head">
       <div class="chat-head-l">
-        <div class="chat-av"><i class="fas fa-microchip"></i></div>
+        <div class="chat-av"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="6" width="12" height="12" rx="2"/><path d="M9 2v3M15 2v3M9 19v3M15 19v3M2 9h3M2 15h3M19 9h3M19 15h3"/></svg></div>
         <div>
           <h5>Tangotech — Asesoría técnica</h5>
           <span><span class="d"></span> Respuesta en minutos</span>
         </div>
       </div>
-      <button class="chat-close" id="chatClose"><i class="fas fa-times"></i></button>
+      <button class="chat-close" id="chatClose"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M5 5l14 14M19 5L5 19"/></svg></button>
     </div>
     <div class="chat-body" id="chatBody"></div>
     <div class="chat-foot">
       <input id="chatInput" type="text" placeholder="Escribí tu consulta…" autocomplete="off"/>
-      <button id="chatSend"><i class="fas fa-arrow-up"></i></button>
+      <button id="chatSend"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg></button>
     </div>
   </div>
-  <button class="fab fab-bot" id="chatToggle" aria-label="Asesoría técnica"><i class="fas fa-microchip"></i><span>Consulta técnica</span></button>
+  <button class="fab fab-bot" id="chatToggle" aria-label="Asesoría técnica"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="6" width="12" height="12" rx="2"/><path d="M9 2v3M15 2v3M9 19v3M15 19v3M2 9h3M2 15h3M19 9h3M19 15h3"/></svg><span>Consulta técnica</span></button>
 </div>
 
 <script>
@@ -652,12 +652,12 @@ const T={
   es:{
     nav_home:"Inicio",nav_sv:"Servicios",nav_val:"Valores",nav_con:"Contacto",
     hero_badge:"PARA CREADORES SIN CAPITAL",h1:"Build",h2:"Launch",
-    hero_desc:"Sin inversores. Sin capital propio. Tangotech convierte tu idea en un producto real.",
+    hero_desc:"Diseño, desarrollo y lanzamiento — todo con un equipo senior, sin que necesites inversores ni armar una empresa.",
     hero_cta:"Quiero construir esto",hero_disc:"Descubrir más",
     s1:"proyectos lanzados",s2:"Tiempo promedio al mercado",
-    fb1:"Equipo completo desde día 1",fb2:"Dev + Diseño + Organización",
+    fb1:"Un solo equipo, todo el proceso",fb2:"Diseño, desarrollo y lanzamiento",
     sv_tag:"// QUÉ HACEMOS",sv_tit:"De la idea al producto en tiempo récord.",
-    sv_sub:"Un equipo completo. Sin que tengas que armar una empresa para lograrlo.",
+    sv_sub:"Diseño, desarrollo, producto y pagos. Todo bajo un mismo techo senior, sin tercerizar nada.",
     s1t:"Construcción del producto",s1d:"Armamos la web o la app que tu idea necesita, lista para que la gente la use de verdad — no una maqueta.",
     s2t:"Diseño que se entiende",s2d:"Una pantalla simple, donde cualquiera sabe qué hacer sin instrucciones. La probamos con personas reales antes de construir.",
     s3t:"Organización y avance",s3d:"Orden, seguimiento claro y cero tiempo perdido.",
@@ -672,19 +672,19 @@ const T={
     p2t:"Respuesta en 24h",p2d:"Compromiso de velocidad real",
     p3t:"Código es tuyo",p3d:"Repo, dominio e infra en tu cuenta",
     fn_l:"Nombre completo",fe_l:"Email profesional",fi_l:"¿Cuál es tu idea?",
-    f_sub:"Enviar propuesta →",f_snd:"Enviando…",f_note:"✅ Sin spam. Respondemos en menos de 24 horas.",
+    f_sub:"Enviar propuesta →",f_snd:"Enviando…",f_note:"Sin spam. Respondemos en menos de 24 horas.",
     f_ok:"¡Recibido! En 24h un experto se pondrá en contacto.",f_err:"⚠️ Completá todos los campos correctamente.",
     ft_desc:"Impulsando founders sin barreras de capital."
   },
   en:{
     nav_home:"Home",nav_sv:"Services",nav_val:"Values",nav_con:"Contact",
     hero_badge:"FOR BUILDERS WITH NO CAPITAL",h1:"Build",h2:"Launch",
-    hero_desc:"No investors. No capital. Tangotech turns your idea into a real product.",
+    hero_desc:"Design, engineering and launch — one senior team, no investors and no company to build.",
     hero_cta:"I want to build this",hero_disc:"Learn more",
     s1:"projects launched",s2:"Average time to market",
-    fb1:"Full team from day 1",fb2:"Dev + Diseño + Organización",
+    fb1:"One team, the whole process",fb2:"Design, engineering and launch",
     sv_tag:"// WHAT WE DO",sv_tit:"From idea to product in record time.",
-    sv_sub:"A complete team. No company-building required.",
+    sv_sub:"Design, engineering, product and payments. One senior team, nothing outsourced.",
     s1t:"Building the product",s1d:"We build the website or app your idea needs, ready for real people to use — not a mockup.",
     s2t:"Design people understand",s2d:"A simple screen anyone can use without instructions. Tested with real people before we build.",
     s3t:"Organization and progress",s3d:"Order, clear tracking, zero wasted time.",
@@ -699,7 +699,7 @@ const T={
     p2t:"24h response",p2d:"Real speed commitment",
     p3t:"Code is yours",p3d:"Repo, domain and infra in your account",
     fn_l:"Full name",fe_l:"Professional email",fi_l:"What's your idea?",
-    f_sub:"Submit proposal →",f_snd:"Sending…",f_note:"✅ No spam. We reply within 24 business hours.",
+    f_sub:"Submit proposal →",f_snd:"Sending…",f_note:"No spam. We reply within 24 business hours.",
     f_ok:"Received! An expert will contact you within 24h.",f_err:"⚠️ Please fill all fields correctly.",
     ft_desc:"Empowering founders without capital barriers."
   }
