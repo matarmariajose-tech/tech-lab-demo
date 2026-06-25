@@ -130,7 +130,7 @@
     }
 
     /* HERO */
-    .hero{position:relative;min-height:100vh;display:flex;align-items:center;padding:120px 0 80px;overflow:hidden}
+    .hero{position:relative;min-height:auto;display:flex;align-items:center;padding:96px 0 64px;overflow:hidden}
     .hero-bg{position:absolute;inset:0;z-index:0;
       background:radial-gradient(ellipse 80% 60% at 5% 20%,rgba(67,24,255,.55) 0%,transparent 60%),
                  radial-gradient(ellipse 60% 50% at 90% 10%,rgba(255,107,74,.42) 0%,transparent 60%),
@@ -145,12 +145,12 @@
     .hero-layout{max-width:680px}
 
     /* HERO BADGE */
-    .hero-badge{display:inline-flex;align-items:center;gap:10px;background:var(--coral-d);border:1px solid rgba(255,107,74,.22);color:var(--coral);padding:7px 16px 7px 12px;border-radius:100px;font-family:var(--mono);font-size:.68rem;letter-spacing:.08em;margin-bottom:28px;opacity:0;animation:fadeUp .6s var(--e1) .1s forwards}
+    .hero-badge{display:inline-flex;align-items:center;gap:10px;background:var(--coral-d);border:1px solid rgba(255,107,74,.22);color:var(--coral);padding:7px 16px 7px 12px;border-radius:100px;font-family:var(--mono);font-size:.68rem;letter-spacing:.08em;margin-bottom:20px;opacity:0;animation:fadeUp .6s var(--e1) .1s forwards}
     .hero-badge .dot{width:6px;height:6px;background:var(--coral);border-radius:50%;animation:pulse 2s infinite;flex-shrink:0}
     @keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.5;transform:scale(1.5)}}
-    .hero-title{font-size:clamp(2.8rem,5.5vw,4.6rem);font-weight:800;line-height:1.08;letter-spacing:-.04em;margin-bottom:24px;opacity:0;animation:fadeUp .7s var(--e1) .2s forwards}
+    .hero-title{font-size:clamp(2.8rem,5.5vw,4.6rem);font-weight:800;line-height:1.08;letter-spacing:-.04em;margin-bottom:18px;opacity:0;animation:fadeUp .7s var(--e1) .2s forwards}
     .ac{color:var(--coral)}.ai{color:var(--indigo)}
-    .hero-tag{font-family:var(--mono);font-size:.8rem;color:rgba(255,255,255,.28);letter-spacing:.04em;margin-bottom:28px;opacity:0;animation:fadeUp .7s var(--e1) .3s forwards}
+    .hero-tag{font-family:var(--mono);font-size:.8rem;color:rgba(255,255,255,.28);letter-spacing:.04em;margin-bottom:20px;opacity:0;animation:fadeUp .7s var(--e1) .3s forwards}
     .hero-desc{font-size:1.05rem;line-height:1.75;color:rgba(255,255,255,.48);max-width:500px;margin-bottom:40px;opacity:0;animation:fadeUp .7s var(--e1) .35s forwards}
     .hero-btns{display:flex;gap:14px;flex-wrap:wrap;opacity:0;animation:fadeUp .7s var(--e1) .45s forwards}
     @keyframes fadeUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
@@ -404,11 +404,6 @@
           <button class="btn-ghost" id="toSv"><span data-i18n="hero_disc">Descubrir más</span></button>
         </div>
       </div>
-    </div>
-    <div class="hero-stats">
-      <div class="hero-stat"><b><span>+40</span></b><small data-i18n="s1">proyectos lanzados</small></div>
-      <div class="hero-stat"><b><span>&lt;6</span> sem</b><small data-i18n="s2">Tiempo promedio al mercado</small></div>
-      <div class="hero-stat"><b>1</b><small data-i18n="fb1">Equipo senior, de punta a punta</small></div>
     </div>
   </div>
 </section>
