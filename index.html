@@ -221,7 +221,7 @@
     .process-steps{display:grid;grid-template-columns:repeat(4,1fr);gap:0;position:relative}
     .process-steps::before{content:'';position:absolute;top:27px;left:12.5%;right:12.5%;height:1px;background:linear-gradient(90deg,var(--indigo),var(--coral));z-index:0}
     @media(max-width:768px){.process-steps{grid-template-columns:1fr 1fr;gap:32px}.process-steps::before{display:none}}
-    @media(max-width:480px){.process-steps{grid-template-columns:1fr}}
+    @media(max-width:380px){.process-steps{grid-template-columns:1fr}}
     .ps{text-align:center;padding:0 16px;position:relative;z-index:1}
     .ps-num{width:56px;height:56px;border-radius:50%;background:var(--dark);border:2px solid var(--indigo);display:flex;align-items:center;justify-content:center;margin:0 auto 20px;font-family:var(--mono);font-weight:700;font-size:.8rem;color:var(--indigo);transition:background .3s,color .3s}
     .ps:hover .ps-num{background:var(--indigo);color:#fff}
@@ -235,7 +235,7 @@
     .values-section .ssub{color:rgba(26,26,46,.46)}
     .vg{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
     @media(max-width:900px){.vg{grid-template-columns:1fr 1fr}}
-    @media(max-width:560px){.vg{grid-template-columns:1fr}}
+    @media(max-width:360px){.vg{grid-template-columns:1fr}}
     .vc{background:#fff;border:1px solid var(--bl);border-radius:20px;padding:36px 28px;transition:transform .35s var(--e1),box-shadow .35s;position:relative;overflow:hidden}
     .vc::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--indigo),var(--coral));transform:scaleX(0);transform-origin:left;transition:transform .4s var(--e2)}
     .vc:hover{transform:translateY(-4px);box-shadow:0 24px 48px -16px rgba(67,24,255,.12)}
@@ -329,6 +329,13 @@
       .faq-q{padding:16px 0}
       .div{margin:0}
       footer{padding:40px 0 24px}
+      .process-steps{gap:16px 12px}
+      .ps{padding:0 4px}
+      .ps-num{width:42px;height:42px;font-size:.7rem;margin-bottom:14px}
+      .ps h4{font-size:.85rem}
+      .ps p{font-size:.74rem}
+      .vc{padding:22px 18px}
+      .v-ico{margin-bottom:14px}
     }
 
     /* FLOATING CTAs */
@@ -474,7 +481,7 @@
   <div class="w">
     <div class="sh c rv">
       <div class="stag" data-i18n="sv_tag">// CÓMO TRABAJAMOS</div>
-      <h2 class="stit" data-i18n="sv_tit">Del primer mensaje<br/>al producto live.</h2>
+      <h2 class="stit" data-i18n="sv_tit">De la idea al deploy.<br/>Sin vueltas.</h2>
       <p class="ssub" data-i18n="sv_sub">Diseño, desarrollo, producto y pagos. Todo bajo un mismo techo senior, sin tercerizar nada.</p>
     </div>
     <div class="process-steps rv">
@@ -635,7 +642,7 @@ const T={
     hero_cta:"Quiero construir esto",hero_disc:"Descubrir más",
     s1:"proyectos lanzados",s2:"Tiempo promedio al mercado",
     fb1:"Equipo senior, de punta a punta",
-    sv_tag:"// CÓMO TRABAJAMOS",sv_tit:"Del primer mensaje al producto live.",
+    sv_tag:"// CÓMO TRABAJAMOS",sv_tit:"De la idea al deploy. Sin vueltas.",
     sv_sub:"Diseño, desarrollo, producto y pagos. Todo bajo un mismo techo senior, sin tercerizar nada.",
     s1t:"Construcción del producto",s1d:"Armamos la web o la app que tu idea necesita, lista para que la gente la use de verdad — no una maqueta.",
     s2t:"Diseño que se entiende",s2d:"Una pantalla simple, donde cualquiera sabe qué hacer sin instrucciones. La probamos con personas reales antes de construir.",
@@ -662,7 +669,7 @@ const T={
     hero_cta:"I want to build this",hero_disc:"Learn more",
     s1:"projects launched",s2:"Average time to market",
     fb1:"Senior team, end to end",
-    sv_tag:"// HOW WE WORK",sv_tit:"From the first message to a live product.",
+    sv_tag:"// HOW WE WORK",sv_tit:"From idea to deploy. No detours.",
     sv_sub:"Design, engineering, product and payments. One senior team, nothing outsourced.",
     s1t:"Building the product",s1d:"We build the website or app your idea needs, ready for real people to use — not a mockup.",
     s2t:"Design people understand",s2d:"A simple screen anyone can use without instructions. Tested with real people before we build.",
