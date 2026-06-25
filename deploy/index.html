@@ -4,6 +4,11 @@
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"/>
   <title>Tangotech | Construimos tu idea — Build real. Launch fast.</title>
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg"/>
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png"/>
+  <link rel="icon" type="image/png" sizes="512x512" href="/favicon-512.png"/>
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png"/>
+  <meta name="theme-color" content="#0B0918"/>
   <meta name="google-site-verification" content="w7nyTMa_zSPQy-UFgp5r4wX9HsneLal7F6uFPVCa2Wo" />
   <meta name="description" content="Equipo de ingenieros senior que convierte tu idea en un producto real en menos de 6 semanas, sin que necesites capital ni experiencia técnica."/>
   <link rel="canonical" href="https://tangotechstore.com/"/>
@@ -255,7 +260,7 @@
     .faq-section{padding:100px 0;background:var(--dmid)}
     .faq-wrap{max-width:680px;margin:0 auto}
     .faq-item{border-bottom:1px solid var(--bd)}
-    .faq-q{display:flex;align-items:center;justify-content:space-between;padding:22px 0;cursor:pointer;font-weight:600;font-size:.95rem;color:rgba(255,255,255,.75);transition:color .2s;gap:16px}
+    .faq-q{display:flex;align-items:center;justify-content:space-between;padding:22px 0;cursor:pointer;font-weight:600;font-size:.95rem;color:rgba(255,255,255,.75);transition:color .2s;gap:16px;width:100%;text-align:left;background:none;border:none;font-family:var(--font)}
     .faq-q:hover{color:#fff}
     .faq-icon{font-size:1.2rem;color:rgba(255,255,255,.3);transition:transform .3s var(--e2),color .2s;flex-shrink:0;line-height:1}
     .faq-item.open .faq-icon{transform:rotate(45deg);color:var(--coral)}
@@ -495,10 +500,10 @@
   <div class="w">
     <div class="sh c rv"><div class="stag">// PREGUNTAS FRECUENTES</div><h2 class="stit">Las dudas más comunes<br/>antes de arrancar.</h2></div>
     <div class="faq-wrap">
-      <div class="faq-item rv"><div class="faq-q" onclick="faqToggle(this)"><span>¿Cuánto cuesta un proyecto?</span><span class="faq-icon">+</span></div><div class="faq-a"><p>Depende del alcance, pero trabajamos con presupuestos desde <span id="faqBudget">$3.000 USD</span>. En la primera call gratuita definimos qué se puede hacer con tu presupuesto y cuál es el scope más inteligente.</p></div></div>
-      <div class="faq-item rv d1"><div class="faq-q" onclick="faqToggle(this)"><span>¿Qué pasa si todavía no tengo la idea clara?</span><span class="faq-icon">+</span></div><div class="faq-a"><p>Perfecto. Parte de nuestro trabajo es ayudarte a definir el producto. La primera sesión de discovery es gratuita y sin compromiso. Muchos de nuestros mejores proyectos empezaron con una idea vaga.</p></div></div>
-      <div class="faq-item rv d2"><div class="faq-q" onclick="faqToggle(this)"><span>¿El código y el dominio quedan en mis manos?</span><span class="faq-icon">+</span></div><div class="faq-a"><p>Siempre. Repositorio en tu GitHub, dominio en tu cuenta, deploy en tu infra. Nada queda en manos nuestras. El día uno ya sos dueño de todo.</p></div></div>
-      <div class="faq-item rv d3"><div class="faq-q" onclick="faqToggle(this)"><span>¿Trabajan con founders sin inversión?</span><span class="faq-icon">+</span></div><div class="faq-a"><p>Sí, es nuestro core. Tenemos modelos de pago flexibles para founders en etapa pre-seed. Creemos que una gran idea no debería frenar por falta de capital inicial.</p></div></div>
+      <div class="faq-item rv"><button type="button" class="faq-q" onclick="faqToggle(this)" aria-expanded="false"><span>¿Cuánto cuesta un proyecto?</span><span class="faq-icon">+</span></button><div class="faq-a"><p>Depende del alcance, pero trabajamos con presupuestos desde <span id="faqBudget">$3.000 USD</span>. En la primera call gratuita definimos qué se puede hacer con tu presupuesto y cuál es el scope más inteligente.</p></div></div>
+      <div class="faq-item rv d1"><button type="button" class="faq-q" onclick="faqToggle(this)" aria-expanded="false"><span>¿Qué pasa si todavía no tengo la idea clara?</span><span class="faq-icon">+</span></button><div class="faq-a"><p>Perfecto. Parte de nuestro trabajo es ayudarte a definir el producto. La primera sesión de discovery es gratuita y sin compromiso. Muchos de nuestros mejores proyectos empezaron con una idea vaga.</p></div></div>
+      <div class="faq-item rv d2"><button type="button" class="faq-q" onclick="faqToggle(this)" aria-expanded="false"><span>¿El código y el dominio quedan en mis manos?</span><span class="faq-icon">+</span></button><div class="faq-a"><p>Siempre. Repositorio en tu GitHub, dominio en tu cuenta, deploy en tu infra. Nada queda en manos nuestras. El día uno ya sos dueño de todo.</p></div></div>
+      <div class="faq-item rv d3"><button type="button" class="faq-q" onclick="faqToggle(this)" aria-expanded="false"><span>¿Trabajan con founders sin inversión?</span><span class="faq-icon">+</span></button><div class="faq-a"><p>Sí, es nuestro core. Tenemos modelos de pago flexibles para founders en etapa pre-seed. Creemos que una gran idea no debería frenar por falta de capital inicial.</p></div></div>
     </div>
   </div>
 </section>
@@ -578,12 +583,12 @@
           <span><span class="d"></span> Respuesta en minutos</span>
         </div>
       </div>
-      <button class="chat-close" id="chatClose"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M5 5l14 14M19 5L5 19"/></svg></button>
+      <button class="chat-close" id="chatClose" aria-label="Cerrar chat"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M5 5l14 14M19 5L5 19"/></svg></button>
     </div>
     <div class="chat-body" id="chatBody"></div>
     <div class="chat-foot">
       <input id="chatInput" type="text" placeholder="Escribí tu consulta…" autocomplete="off"/>
-      <button id="chatSend"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg></button>
+      <button id="chatSend" aria-label="Enviar mensaje"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg></button>
     </div>
   </div>
   <button class="fab fab-bot" id="chatToggle" aria-label="Asesoría técnica"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="6" width="12" height="12" rx="2"/><path d="M9 2v3M15 2v3M9 19v3M15 19v3M2 9h3M2 15h3M19 9h3M19 15h3"/></svg><span>Consulta técnica</span></button>
@@ -695,8 +700,8 @@ setTimeout(()=>document.querySelectorAll('.rv:not(.vis)').forEach(el=>el.classLi
 /* FAQ */
 function faqToggle(el){
   const item=el.parentElement,wasOpen=item.classList.contains('open');
-  document.querySelectorAll('.faq-item').forEach(i=>i.classList.remove('open'));
-  if(!wasOpen)item.classList.add('open');
+  document.querySelectorAll('.faq-item').forEach(i=>{i.classList.remove('open');i.querySelector('.faq-q').setAttribute('aria-expanded','false')});
+  if(!wasOpen){item.classList.add('open');el.setAttribute('aria-expanded','true')}
 }
 
 /* UTM / SOURCE TRACKING — persiste la fuente del lead durante toda la sesión */
