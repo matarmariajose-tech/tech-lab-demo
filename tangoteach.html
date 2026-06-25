@@ -502,7 +502,7 @@
   <div class="w">
     <div class="sh c rv"><div class="stag">// PREGUNTAS FRECUENTES</div><h2 class="stit">Las dudas más comunes<br/>antes de arrancar.</h2></div>
     <div class="faq-wrap">
-      <div class="faq-item rv"><div class="faq-q" onclick="faqToggle(this)"><span>¿Cuánto cuesta un MVP?</span><span class="faq-icon">+</span></div><div class="faq-a"><p>Depende del alcance, pero trabajamos con presupuestos desde $3.000 USD. En la primera call gratuita definimos qué se puede hacer con tu presupuesto y cuál es el scope más inteligente.</p></div></div>
+      <div class="faq-item rv"><div class="faq-q" onclick="faqToggle(this)"><span>¿Cuánto cuesta un MVP?</span><span class="faq-icon">+</span></div><div class="faq-a"><p>Depende del alcance, pero trabajamos con presupuestos desde <span id="faqBudget">$3.000 USD</span>. En la primera call gratuita definimos qué se puede hacer con tu presupuesto y cuál es el scope más inteligente.</p></div></div>
       <div class="faq-item rv d1"><div class="faq-q" onclick="faqToggle(this)"><span>¿Qué pasa si todavía no tengo la idea clara?</span><span class="faq-icon">+</span></div><div class="faq-a"><p>Perfecto. Parte de nuestro trabajo es ayudarte a definir el producto. La primera sesión de discovery es gratuita y sin compromiso. Muchos de nuestros mejores proyectos empezaron con una idea vaga.</p></div></div>
       <div class="faq-item rv d2"><div class="faq-q" onclick="faqToggle(this)"><span>¿El código y el dominio quedan en mis manos?</span><span class="faq-icon">+</span></div><div class="faq-a"><p>Siempre. Repositorio en tu GitHub, dominio en tu cuenta, deploy en tu infra. Nada queda en manos nuestras. El día uno ya sos dueño de todo.</p></div></div>
       <div class="faq-item rv d3"><div class="faq-q" onclick="faqToggle(this)"><span>¿Trabajan con founders sin inversión?</span><span class="faq-icon">+</span></div><div class="faq-a"><p>Sí, es nuestro core. Tenemos modelos de pago flexibles para founders en etapa pre-seed. Creemos que una gran idea no debería frenar por falta de capital inicial.</p></div></div>
@@ -597,6 +597,21 @@
 </div>
 
 <script>
+/* MONEDA POR REGIÓN — Europa ve euros, el resto (incluido LatAm) ve dólares */
+const isEU=(()=>{
+  try{
+    const tz=Intl.DateTimeFormat().resolvedOptions().timeZone||'';
+    if(tz.startsWith('Europe/'))return true;
+    const lang=(navigator.language||'').toLowerCase();
+    return ['de','fr','it','pt-pt','nl','es-es','pl','sv','da','fi','el','ro','hu','cs','sk','bg'].some(l=>lang===l||lang.startsWith(l+'-'));
+  }catch(e){return false}
+})();
+const CUR=isEU?{sym:'€',code:'EUR',min:'2.800',mid:'2.800 – 9.200',max:'9.200'}:{sym:'$',code:'USD',min:'3.000',mid:'3.000 – 10.000',max:'10.000'};
+document.addEventListener('DOMContentLoaded',()=>{
+  const el=document.getElementById('faqBudget');
+  if(el)el.textContent=`${CUR.sym}${CUR.min} ${CUR.code}`;
+});
+
 const T={
   es:{
     nav_home:"Inicio",nav_sv:"Servicios",nav_val:"Valores",nav_con:"Contacto",
@@ -766,7 +781,7 @@ waFab?.addEventListener('click',()=>{if(window.fbq)fbq('track','Contact');if(win
       askType:(idea)=>`Tomo nota: "${idea}". ¿En qué etapa se encuentra el proyecto?`,
       opts1:["Etapa de idea, sin desarrollo","Prototipo o diseño en curso","Producto activo, busco escalar"],
       askBudget:"Para dimensionar el alcance correctamente, ¿qué presupuesto inicial estás considerando?",
-      opts2:["Menos de USD 3.000","USD 3.000 – 10.000","Más de USD 10.000 / a definir"],
+      opts2:[`Menos de ${CUR.code} ${CUR.min}`,`${CUR.code} ${CUR.mid}`,`Más de ${CUR.code} ${CUR.max} / a definir`],
       askContact:"Con esta información un ingeniero senior puede preparar un diagnóstico preliminar. Dejanos tu email o WhatsApp de contacto:",
       done:(email)=>`Consulta registrada (${email}). Un ingeniero senior de Tangotech se va a comunicar dentro de las próximas 24 horas hábiles. Si preferís avanzar de inmediato, podés escribirnos por WhatsApp.`,
       placeholder:"Email o WhatsApp de contacto…"

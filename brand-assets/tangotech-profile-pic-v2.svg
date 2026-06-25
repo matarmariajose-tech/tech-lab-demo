@@ -1,0 +1,12 @@
+<svg viewBox="0 0 1080 1080" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1080" height="1080" fill="#0B0918"/>
+
+  <g transform="translate(540,430)">
+    <path d="M -148 -98 L -36 0 L -148 98" fill="none" stroke="#4318FF" stroke-width="50" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M -36 -98 L 76 0 L -36 98" fill="none" stroke="#FF6B4A" stroke-width="50" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <text x="540" y="660" text-anchor="middle" font-family="Plus Jakarta Sans" font-weight="800" font-size="118" letter-spacing="-4" fill="#FFFFFF">Tangotech</text>
+
+  <text x="540" y="730" text-anchor="middle" font-family="Space Mono" font-weight="700" font-size="28" letter-spacing="1" fill="#FF6B4A">build_real(); launch_fast();</text>
+</svg>
